@@ -15,7 +15,7 @@ html {
 }
 
 .text-white {
-    color: #ccc !important;
+    color: black !important;
 }
 .text-center {
     text-align: center !important
@@ -96,7 +96,7 @@ html {
 
 #header {
     height: 46px;
-    background-color: black;
+    background-color: rgba(73, 52, 231,0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -120,12 +120,19 @@ html {
 #nav li {
     position: relative;
 }
-
+.search-btn button,
 #nav > li > a {
     color: white;
     text-transform: uppercase;
 
 }
+.search-btn button{
+    background-color: rgba(73, 52, 231,0.9);
+    right: 0;
+    top: 0;
+}
+
+.search-btn button,
 #nav li a {
     
     text-decoration: none;
@@ -175,6 +182,7 @@ html {
     display: none;
 }
 
+
 #header  .mobile-menu-btn,
 #header .search-btn {
     float: right;
@@ -182,7 +190,12 @@ html {
 
 }
 
-#header .search-btn:hover {
+.search-btn .sign-s{
+    width: 120px;
+    height: 46px;
+}
+
+#header .search-btn .sign-s:hover {
     cursor: pointer;
     background-color: #f44336;
     
@@ -217,7 +230,7 @@ html {
 #slider .text-content {
     position: absolute;
     bottom: 47px;
-    color: #fff;
+    color: rgb(235, 223, 60);
     left: 50%;
     transform: translateX(-50%);
     text-align: center;/* canh dong chu giua*/
@@ -278,7 +291,7 @@ html {
     line-height: 1.4;/*do cao 1 dong - neu tieng viet la 1.6*/
 }
 
-    #content .member-list {
+#content .member-list {
     margin-top: 32px;
     text-transform: capitalize;
 }
@@ -298,7 +311,7 @@ html {
 
 /*tour section*/
 .tour-section {
-    background-color: rgb(131, 87, 87);
+    background-color: rgba(251, 227, 5,0.3);
 }
 
 .tickets-list {
@@ -311,7 +324,7 @@ html {
     color: #757575;
     font-size: 15px;
     padding: 11px 16px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(51, 38, 38);
 }
 
 .tickets-list .sold-out {
@@ -401,9 +414,11 @@ html {
 
 }
 
+.signup.open,
 .modal.open {
     display: flex;
 }
+
 
 .modal-container {
     background: #fff;
@@ -413,6 +428,7 @@ html {
     position: relative;
     animation: modalFadeIn ease 0.4s;/*chạy from từ trên xuống dưới*/
 }
+
 header.modal-header {
     background: #009688;
     height: 130px;
@@ -431,6 +447,8 @@ header.modal-header {
     color: #000;
     background: red;
 }
+
+
 .modal-close {
     position: absolute;
     right: 0;
@@ -440,6 +458,7 @@ header.modal-header {
     cursor: pointer;/*nhan vao X se hien ra ban tay*/
     opacity: 0.9;/*nhan vao X thi se mo di*/
 }
+
 
 .modal-body {
     padding: 16px;
@@ -463,6 +482,8 @@ header.modal-header {
     background-color: rgb(148, 199, 212);
     opacity: 0.9;
 }
+
+ 
 #buy-tickets {
     width: 100%;
     color: #fff;
@@ -493,6 +514,70 @@ header.modal-header {
         transform: translateY(0);
 
     }
+}
+
+
+/*dang ki thanh vien*/
+
+
+.signup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);/*khi nhan vao mua ve thi trang web chinh sex chuyen sang mau xam.khi do sex hien ra trang thanh toan */
+    display: none;/*neu sua thanh none thi form se an di*/
+    align-items: center;/*cho ve giua chieu cao thang cha*/
+    justify-content: center;/*nam giua chieu ngang*/
+
+}
+.signup-conter{
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - 40px);/*khi thu nho man hinh thi giao dien cung se thu nho*/
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.4s;/*chạy from từ trên xuống dưới*/
+}
+header.signs-header {
+    background: #009688;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.sign-body{
+    padding: 16px;
+
+}
+.signup-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    margin: 15px;
+}
+
+#sign-ups{
+    width: 50%;
+    height: 50px;
+    margin: 15px 20px;
+    color: #fff;
+    border: none;
+    float: right;
+    background-color: #009688;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+}
+#sign-ups:hover {
+    color: red;
+    background-color: rgb(148, 199, 212);
+    opacity: 0.9;
 }
 
 /*contact form*/
@@ -536,42 +621,6 @@ header.modal-header {
 }
 
 
-#footer {
-    padding: 64px 16px;
-    text-align: center;
-
-}
-#footer .socials-list {
-    font-size: 24px;
-
-}
-
-#footer .socials-list a {
-    color: rgba(0, 0, 0, 0.6);
-
-}
-
-#footer .socials-list a:hover {
-    color: rgba(0, 0, 0, 0.3);
-
-}
-
-
-#footer .copyright {
-    margin-top: 15px;
-    color: rgba(0, 0, 0, 0.6);
-
-}
-
-#footer .copyright a {
-    color: rgba(0, 0, 0, 0.6);
-
-}
-
-#footer .copyright a:hover {
-    color: rgba(0, 0, 0, 0.3);
-
-}
 
 /*tao kich thuoc khi tren tablet va dt*/
 /*
@@ -579,3 +628,6 @@ PC: >= 1024px
 tablet: >=740 px
 mobile: <=740px
 */
+
+
+
